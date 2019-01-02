@@ -1,27 +1,35 @@
-import React, { Component } from 'react';
-
+import React, {Component, Fragment} from 'react';
+import {Jsx1, Jsx2, Expressions, Style} from './jsx';
+import Stateless from './Stateless';
+import Stateful from './Stateful';
+import State from './State';
+import SetState from './SetState';
+import ForceUpdate from './ForceUpdate';
+import LifeCycle from './LifeCycle';
+import FormSimple from './FormSimple';
+import FormComplex from './FormComplex';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Fragment>
+                <div id="jsx">
+                    <Jsx1/>
+                    <Jsx2/>
+                    <Expressions/>
+                    <Style/>
+                </div>
+                <Stateless/>
+                <Stateful/>
+                <State/>
+                <SetState/>
+                <ForceUpdate/>
+                <LifeCycle/>
+                <FormSimple/>
+                <FormComplex/>
+            </Fragment>
+        );
+    }
 }
 
 export default App;
